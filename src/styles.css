@@ -325,3 +325,25 @@ section { padding: 96px 0; }
   background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);
   border-radius: 16px; padding: 36px 30px; color: #dbe7f0;
 }
+
+/* ─── HISTORY / METEOR ─── */
+.history { background: linear-gradient(180deg, var(--navy) 0%, var(--deep) 100%); position: relative; overflow: hidden; }
+.history::before {
+  content: ''; position: absolute; top: -120px; right: -120px; width: 380px; height: 380px;
+  border-radius: 50%; background: radial-gradient(circle, rgba(45,212,191,0.14) 0%, rgba(45,212,191,0) 70%);
+  pointer-events: none;
+}
+.history-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; position: relative; z-index: 2; }
+.history-copy h2 { font-size: clamp(2rem, 4.4vw, 3.2rem); color: var(--white); margin-bottom: 20px; }
+.history-copy p { color: #c3d4e0; margin-bottom: 16px; font-size: 1.08rem; }
+.history-copy strong { color: var(--bay-light); font-weight: 600; }
+.history-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.stat {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(45,212,191,0.2);
+  border-radius: 16px; padding: 28px 22px; text-align: center;
+}
+.stat-num { font-family: 'Barlow Condensed'; font-weight: 800; font-size: 2.6rem; color: var(--teal); line-height: 1; }
+.stat-label { font-family: 'Barlow Condensed'; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.82rem; color: var(--muted); font-weight: 600; margin-top: 8px; }
+@media (max-width: 860px) {
+  .history-grid { grid-template-columns: 1fr; gap: 34px; }
+}

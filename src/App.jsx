@@ -25,6 +25,7 @@ const EVENT = {
 const NAV = [
   { href: '#about', label: 'The Swim' },
   { href: '#route', label: 'The Route' },
+  { href: '#history', label: 'History' },
   { href: '#details', label: 'Details' },
   { href: '#faq', label: 'FAQ' },
   { href: '#waiver', label: 'Waiver' },
@@ -209,6 +210,52 @@ export default function App() {
               <div className="num">03</div>
               <h3>The Finish</h3>
               <p>Touch down at the Chesapeake Bay Bridge-Tunnel. Bridge to bridge, done. That’s a swim you’ll never forget.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HISTORY / METEOR */}
+      <section id="history" className="history">
+        <div className="container history-grid">
+          <div className="history-copy">
+            <span className="eyebrow">Swim Over History</span>
+            <h2>You&rsquo;re Swimming Over a Crater</h2>
+            <p>
+              About <strong>35 million years ago</strong>, near the end of the Eocene, a
+              <strong> bolide</strong> &mdash; a comet or asteroid somewhere between one and three
+              miles wide &mdash; slammed into the shallow sea off the edge of the North American
+              continent, right about where the mouth of the Chesapeake sits today.
+            </p>
+            <p>
+              The impact blasted out a <strong>25-mile-wide crater</strong> and triggered fires,
+              earthquakes, and a tsunami that ran deep inland. It&rsquo;s the largest known impact
+              crater in the United States and one of the best-preserved &ldquo;wet-target&rdquo;
+              craters on Earth &mdash; now buried thousands of feet beneath the bay.
+            </p>
+            <p>
+              That ancient scar is a big reason the rivers of the region eventually converged
+              here, shaping the <strong>Chesapeake Bay &mdash; the largest estuary in North
+              America</strong>. When you finish at the CBBT, you&rsquo;re treading water almost
+              directly above the center of it all.
+            </p>
+          </div>
+          <div className="history-stats">
+            <div className="stat">
+              <div className="stat-num">~35M</div>
+              <div className="stat-label">Years Ago</div>
+            </div>
+            <div className="stat">
+              <div className="stat-num">25 mi</div>
+              <div className="stat-label">Crater Width</div>
+            </div>
+            <div className="stat">
+              <div className="stat-num">1&ndash;3 mi</div>
+              <div className="stat-label">Impactor Size</div>
+            </div>
+            <div className="stat">
+              <div className="stat-num">#1</div>
+              <div className="stat-label">Largest US Crater</div>
             </div>
           </div>
         </div>
