@@ -15,7 +15,8 @@ const EVENT = {
   distance: '~2 Miles',
   start: 'Lesner Bridge',
   finish: 'Chesapeake Bay Bridge-Tunnel',
-  registerUrl: '#register',       // replace with RunSignup/Eventbrite link
+  registerUrl: '#register',       // scrolls to embedded Google Form
+  googleFormUrl: '[GOOGLE_FORM_EMBED_URL]', // paste Google Form embed URL here
   price: '[PRICE TBD]',           // e.g. '$65'
   contactEmail: 'masters@swimnerd.com',
 }
@@ -41,7 +42,7 @@ function useHashRoute() {
 const FAQS = [
   {
     q: 'Do I need to wear a wetsuit?',
-    a: 'Wetsuits are [WETSUIT POLICY TBD]. Chesapeake Bay water temps in summer are typically comfortable, but bring what keeps you safe and confident for a 2-mile crossing.',
+    a: 'Wetsuits are optional — wear one if you want, but it’s not needed. Mid-September water in the Chesapeake Bay is warm, typically in the mid-to-upper 70s°F (around 75–78°F based on past years). Plenty comfortable for the crossing. Wear whatever keeps you confident over 2 miles.',
   },
   {
     q: 'Is there safety support on the water?',
@@ -53,7 +54,7 @@ const FAQS = [
   },
   {
     q: 'What about currents and tides?',
-    a: 'The Lesner-to-CBBT line is timed around favorable tide windows. [TIDE/CURRENT DETAILS TBD] Full course briefing is provided before the start.',
+    a: 'The route is timed around a favorable tide window. Full course briefing is provided before the start so you know exactly where to sight and how to work with the current.',
   },
   {
     q: 'What do I get for registering?',
@@ -261,9 +262,28 @@ export default function App() {
         <div className="container register-inner">
           <span className="eyebrow" style={{ justifyContent: 'center', display: 'flex' }}>Claim Your Spot</span>
           <h2>Ready to Cross the Bay?</h2>
-          <p>Fields are limited and open water swims fill up. Lock in your entry for the Bridge to Bridge and start training for the crossing.</p>
-          <a href={EVENT.registerUrl} className="btn btn-primary" style={{ fontSize: '1.3rem', padding: '18px 44px' }}>Register Now</a>
-          <p style={{ marginTop: 20, fontSize: '0.95rem', opacity: 0.85 }}>
+          <p>Fields are limited and open water swims fill up. Fill out the form below to lock in your entry for the Bridge to Bridge.</p>
+
+          {EVENT.googleFormUrl && !EVENT.googleFormUrl.startsWith('[') ? (
+            <div className="form-embed">
+              <iframe
+                src={EVENT.googleFormUrl}
+                title="Bridge to Bridge Registration"
+                width="100%"
+                height="920"
+                frameBorder="0"
+                marginHeight="0"
+                marginWidth="0"
+              >Loading registration form…</iframe>
+            </div>
+          ) : (
+            <div className="form-placeholder">
+              <p style={{ marginBottom: 18 }}>Registration form is being finalized. Check back soon — or email us to reserve your spot now.</p>
+              <a href={`mailto:${EVENT.contactEmail}?subject=Bridge%20to%20Bridge%20Registration`} className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '16px 40px' }}>Reserve by Email</a>
+            </div>
+          )}
+
+          <p style={{ marginTop: 24, fontSize: '0.95rem', opacity: 0.85 }}>
             All participants must sign the <a href="#waiver" style={{ color: 'var(--bay-light)', fontWeight: 600 }}>event waiver</a>.
             Questions? Email <a href={`mailto:${EVENT.contactEmail}`} style={{ color: 'var(--bay-light)', fontWeight: 600 }}>{EVENT.contactEmail}</a>
           </p>
