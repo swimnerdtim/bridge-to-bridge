@@ -5,6 +5,7 @@ import finishImg from './assets/cbbt-finish.jpg'
 import mapImg from './assets/course-map.jpg'
 import logoImg from './assets/swimnerd-logo.jpg'
 import Waiver from './Waiver.jsx'
+import { IconCalendar, IconPin, IconFlag, IconLifebuoy, IconWave, IconTicket } from './Icons.jsx'
 
 // ─── Event config (edit these when details are locked) ───────────────
 const EVENT = {
@@ -222,32 +223,32 @@ export default function App() {
           </div>
           <div className="info-grid">
             <div className="info-card">
-              <div className="icon">📅</div>
+              <div className="icon"><IconCalendar /></div>
               <h3>Date &amp; Time</h3>
               <p><span className="tbd">{EVENT.date}</span><br />Start: {EVENT.time}</p>
             </div>
             <div className="info-card">
-              <div className="icon">📍</div>
+              <div className="icon"><IconPin /></div>
               <h3>Start Line</h3>
               <p>Lesner Bridge, Lynnhaven Inlet<br />Virginia Beach, VA</p>
             </div>
             <div className="info-card">
-              <div className="icon">🏁</div>
+              <div className="icon"><IconFlag /></div>
               <h3>Finish Line</h3>
               <p>Chesapeake Bay Bridge-Tunnel<br />~2 miles down the bay coast</p>
             </div>
             <div className="info-card">
-              <div className="icon">🛟</div>
+              <div className="icon"><IconLifebuoy /></div>
               <h3>Safety Support</h3>
               <p>Kayak &amp; boat escorts on course.<br /><span className="tbd">[Full safety plan TBD]</span></p>
             </div>
             <div className="info-card">
-              <div className="icon">🌊</div>
+              <div className="icon"><IconWave /></div>
               <h3>Conditions</h3>
               <p>Open bay, timed to the tide window.<br /><span className="tbd">[Water temp / wetsuit policy TBD]</span></p>
             </div>
             <div className="info-card">
-              <div className="icon">🎟️</div>
+              <div className="icon"><IconTicket /></div>
               <h3>Entry</h3>
               <p><span className="tbd">{EVENT.price}</span> per swimmer<br />Limited field — register early.</p>
             </div>
