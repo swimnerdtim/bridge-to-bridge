@@ -50,7 +50,7 @@ const FAQS = [
   },
   {
     q: 'How fit do I need to be?',
-    a: 'This is a masters open water swim of roughly 2 miles across open bay. You should be comfortable swimming continuously in open water. Not sure? Reach out and we\u2019ll talk it through.',
+    a: 'This is a masters open water swim of roughly 2 miles across open bay. You should be comfortable swimming continuously in open water. Not sure? Reach out and we’ll talk it through.',
   },
   {
     q: 'What about currents and tides?',
@@ -58,7 +58,7 @@ const FAQS = [
   },
   {
     q: 'What do I get for registering?',
-    a: '[SWAG/PERKS TBD] \u2014 timing, finisher recognition, and the bragging rights of crossing the bay bridge to bridge.',
+    a: '[SWAG/PERKS TBD] — timing, finisher recognition, and the bragging rights of crossing the bay bridge to bridge.',
   },
 ]
 
@@ -171,7 +171,7 @@ export default function App() {
               you can see from the start.
             </p>
             <p>
-              Whether you\u2019re chasing a time or just chasing the crossing, this is
+              Whether you’re chasing a time or just chasing the crossing, this is
               open water swimming the way it should be: honest, beautiful, and
               a little bit epic.
             </p>
@@ -198,7 +198,7 @@ export default function App() {
             <div className="route-step">
               <div className="num">01</div>
               <h3>The Start</h3>
-              <p>Wade in near the Lesner Bridge at the mouth of the Lynnhaven Inlet. Course briefing, then you\u2019re off across the bay.</p>
+              <p>Wade in near the Lesner Bridge at the mouth of the Lynnhaven Inlet. Course briefing, then you’re off across the bay.</p>
             </div>
             <div className="route-step">
               <div className="num">02</div>
@@ -208,7 +208,7 @@ export default function App() {
             <div className="route-step">
               <div className="num">03</div>
               <h3>The Finish</h3>
-              <p>Touch down at the Chesapeake Bay Bridge-Tunnel. Bridge to bridge, done. That\u2019s a crossing you\u2019ll never forget.</p>
+              <p>Touch down at the Chesapeake Bay Bridge-Tunnel. Bridge to bridge, done. That’s a crossing you’ll never forget.</p>
             </div>
           </div>
         </div>
