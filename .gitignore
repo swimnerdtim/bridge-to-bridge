@@ -3,4 +3,4 @@ dist
 .DS_Store
 *.log
 .git-b2b/
-assets/
+/assets/
