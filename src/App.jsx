@@ -4,6 +4,7 @@ import startImg from './assets/beach-startline.jpg'
 import finishImg from './assets/cbbt-finish.jpg'
 import mapImg from './assets/course-map.jpg'
 import duneImg from './assets/dune-path.jpg'
+import spanImg from './assets/beach-cbbt-span.jpg'
 import logoImg from './assets/swimnerd-logo.jpg'
 import Waiver from './Waiver.jsx'
 import { IconCalendar, IconPin, IconFlag, IconWave, IconLifebuoy } from './Icons.jsx'
@@ -272,13 +273,17 @@ export default function App() {
             <p>Chic&rsquo;s Beach, the Chesapeake Bay, and the bridges that bookend the course.</p>
           </div>
           <div className="gallery-grid">
+            <figure className="gallery-item gallery-wide">
+              <img src={spanImg} alt="The full span of the CBBT across the horizon from Chic's Beach" loading="lazy" />
+              <figcaption>The full span of the CBBT across the bay — your horizon the whole swim</figcaption>
+            </figure>
             <figure className="gallery-item gallery-tall">
               <img src={duneImg} alt="The dune path down to the water at Chic's Beach" loading="lazy" />
               <figcaption>The walk down to the water at Chic&rsquo;s Beach</figcaption>
             </figure>
             <figure className="gallery-item">
               <img src={startImg} alt="The Chesapeake Bay shoreline near the start" loading="lazy" />
-              <figcaption>Looking down the shoreline toward the CBBT</figcaption>
+              <figcaption>Looking down the shoreline</figcaption>
             </figure>
             <figure className="gallery-item">
               <img src={finishImg} alt="The Chesapeake Bay Bridge-Tunnel finish" loading="lazy" />
