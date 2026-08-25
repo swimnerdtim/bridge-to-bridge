@@ -89,7 +89,6 @@ export default function App() {
           <div className="container">
             <a href="#top" className="brand" onClick={() => { window.location.hash = '' }}>
               <span className="logo-pill"><img src={logoImg} alt="Swimnerd" /></span>
-              <span className="brand-masters">Masters</span>
             </a>
             <div className="nav-links">
               <a href="#top" onClick={() => { window.location.hash = '' }}>Back to Event</a>
@@ -109,7 +108,6 @@ export default function App() {
         <div className="container">
           <a href="#top" className="brand">
             <span className="logo-pill"><img src={logoImg} alt="Swimnerd" /></span>
-            <span className="brand-masters">Masters</span>
           </a>
           <div className="nav-links">
             {NAV.map((n) => (
@@ -313,7 +311,7 @@ export default function App() {
       {/* FOOTER */}
       <footer className="footer">
         <div className="container">
-          <div className="brand footer-brand"><span className="logo-pill"><img src={logoImg} alt="Swimnerd" /></span><span className="brand-masters">Masters</span></div>
+          <div className="brand footer-brand"><span className="logo-pill"><img src={logoImg} alt="Swimnerd" /></span></div>
           <p>The Bridge to Bridge Swim · Chesapeake Bay, Virginia Beach, VA</p>
           <div className="links">
             <a href="#about">The Swim</a>
