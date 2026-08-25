@@ -9,7 +9,7 @@ import Waiver from './Waiver.jsx'
 // ─── Event config (edit these when details are locked) ───────────────
 const EVENT = {
   name: 'Bridge to Bridge',
-  tagline: 'A 2-mile open water crossing of the Chesapeake Bay',
+  tagline: 'A 2-mile open water swim along the Chesapeake Bay',
   date: 'Saturday, September 19, 2026',
   time: '9:00 AM',
   distance: '~2 Miles',
@@ -42,7 +42,7 @@ function useHashRoute() {
 const FAQS = [
   {
     q: 'Do I need to wear a wetsuit?',
-    a: 'Wetsuits are optional — wear one if you want, but it’s not needed. Mid-September water in the Chesapeake Bay is warm, typically in the mid-to-upper 70s°F (around 75–78°F based on past years). Plenty comfortable for the crossing. Wear whatever keeps you confident over 2 miles.',
+    a: 'Wetsuits are optional — wear one if you want, but it’s not needed. Mid-September water in the Chesapeake Bay is warm, typically in the mid-to-upper 70s°F (around 75–78°F based on past years). Plenty comfortable for the swim. Wear whatever keeps you confident over 2 miles.',
   },
   {
     q: 'Is there safety support on the water?',
@@ -50,7 +50,7 @@ const FAQS = [
   },
   {
     q: 'How fit do I need to be?',
-    a: 'This is a masters open water swim of roughly 2 miles across open bay. You should be comfortable swimming continuously in open water. Not sure? Reach out and we’ll talk it through.',
+    a: 'This is a masters open water swim of roughly 2 miles in open water. You should be comfortable swimming continuously in open water. Not sure? Reach out and we’ll talk it through.',
   },
   {
     q: 'What about currents and tides?',
@@ -58,7 +58,7 @@ const FAQS = [
   },
   {
     q: 'What do I get for registering?',
-    a: '[SWAG/PERKS TBD] — timing, finisher recognition, and the bragging rights of crossing the bay bridge to bridge.',
+    a: '[SWAG/PERKS TBD] — timing, finisher recognition, and the bragging rights of swimming bridge to bridge.',
   },
 ]
 
@@ -158,7 +158,7 @@ export default function App() {
             <h2>Two Bridges. One Bay. You Against the Water.</h2>
             <p>
               The Swimnerd Masters Bridge to Bridge is a point-to-point open water
-              swim across the Chesapeake Bay — starting beneath the Lesner Bridge
+              swim along the Chesapeake Bay — starting beneath the Lesner Bridge
               at the mouth of the Lynnhaven and finishing at the iconic Chesapeake
               Bay Bridge-Tunnel on the horizon.
             </p>
@@ -169,7 +169,7 @@ export default function App() {
               you can see from the start.
             </p>
             <p>
-              Whether you’re chasing a time or just chasing the crossing, this is
+              Whether you’re chasing a time or just chasing the finish, this is
               open water swimming the way it should be: honest, beautiful, and
               a little bit epic.
             </p>
@@ -186,7 +186,7 @@ export default function App() {
           <div className="section-head">
             <span className="eyebrow">The Route</span>
             <h2>Lesner Bridge → CBBT</h2>
-            <p>A straight shot across the bay, roughly two miles of open water with the far bridge in sight the whole way.</p>
+            <p>A straight shot down the bay coast, roughly two miles of open water with the far bridge in sight the whole way.</p>
           </div>
           <div className="route-map">
             <span className="route-badge">~2 Mile Course</span>
@@ -196,17 +196,17 @@ export default function App() {
             <div className="route-step">
               <div className="num">01</div>
               <h3>The Start</h3>
-              <p>Wade in near the Lesner Bridge at the mouth of the Lynnhaven Inlet. Course briefing, then you’re off across the bay.</p>
+              <p>Wade in near the Lesner Bridge at the mouth of the Lynnhaven Inlet. Course briefing, then you’re off down the coast.</p>
             </div>
             <div className="route-step">
               <div className="num">02</div>
-              <h3>The Crossing</h3>
+              <h3>The Swim</h3>
               <p>Two miles of open Chesapeake Bay. Sight off the CBBT, settle into your stroke, and let the tide work with you.</p>
             </div>
             <div className="route-step">
               <div className="num">03</div>
               <h3>The Finish</h3>
-              <p>Touch down at the Chesapeake Bay Bridge-Tunnel. Bridge to bridge, done. That’s a crossing you’ll never forget.</p>
+              <p>Touch down at the Chesapeake Bay Bridge-Tunnel. Bridge to bridge, done. That’s a swim you’ll never forget.</p>
             </div>
           </div>
         </div>
@@ -234,7 +234,7 @@ export default function App() {
             <div className="info-card">
               <div className="icon">🏁</div>
               <h3>Finish Line</h3>
-              <p>Chesapeake Bay Bridge-Tunnel<br />~2 miles across the bay</p>
+              <p>Chesapeake Bay Bridge-Tunnel<br />~2 miles down the bay coast</p>
             </div>
             <div className="info-card">
               <div className="icon">🛟</div>
@@ -259,7 +259,7 @@ export default function App() {
       <section id="register" className="register" style={{ backgroundImage: `url(${finishImg})` }}>
         <div className="container register-inner">
           <span className="eyebrow" style={{ justifyContent: 'center', display: 'flex' }}>Claim Your Spot</span>
-          <h2>Ready to Cross the Bay?</h2>
+          <h2>Ready to Swim Bridge to Bridge?</h2>
           <p>Fields are limited and open water swims fill up. Fill out the form below to lock in your entry for the Bridge to Bridge.</p>
 
           {EVENT.googleFormUrl && !EVENT.googleFormUrl.startsWith('[') ? (
