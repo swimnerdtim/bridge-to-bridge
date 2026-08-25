@@ -16,7 +16,7 @@ const EVENT = {
   start: 'Lesner Bridge',
   finish: 'Chesapeake Bay Bridge-Tunnel',
   registerUrl: '#register',       // scrolls to embedded Google Form
-  googleFormUrl: '[GOOGLE_FORM_EMBED_URL]', // paste Google Form embed URL here
+  googleFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfMI-5dFMHVGwKRA_RiidrUitd4J0RIgG-xwZPrwPrhmwsNtw/viewform?embedded=true',
   price: '[PRICE TBD]',           // e.g. '$65'
   contactEmail: 'masters@swimnerd.com',
 }
