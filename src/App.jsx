@@ -5,14 +5,14 @@ import finishImg from './assets/cbbt-finish.jpg'
 import mapImg from './assets/course-map.jpg'
 import logoImg from './assets/swimnerd-logo.jpg'
 import Waiver from './Waiver.jsx'
-import { IconCalendar, IconPin, IconFlag, IconLifebuoy, IconWave, IconTicket } from './Icons.jsx'
+import { IconCalendar, IconPin, IconFlag, IconWave } from './Icons.jsx'
 
 // ─── Event config (edit these when details are locked) ───────────────
 const EVENT = {
   name: 'Bridge to Bridge',
   tagline: 'A 2-mile open water swim along the Chesapeake Bay',
   date: 'Saturday, September 19, 2026',
-  time: '9:00 AM',
+  time: '9:30 AM',
   distance: '~2 Miles',
   start: 'Lesner Bridge',
   finish: 'Chesapeake Bay Bridge-Tunnel',
@@ -224,33 +224,31 @@ export default function App() {
           <div className="info-grid">
             <div className="info-card">
               <div className="icon"><IconCalendar /></div>
-              <h3>Date &amp; Time</h3>
-              <p><span className="tbd">{EVENT.date}</span><br />Start: {EVENT.time}</p>
+              <div className="info-body">
+                <h3>Date &amp; Time</h3>
+                <p><span className="tbd">{EVENT.date}</span> · Start: {EVENT.time}</p>
+              </div>
             </div>
             <div className="info-card">
               <div className="icon"><IconPin /></div>
-              <h3>Start Line</h3>
-              <p>Lesner Bridge, Lynnhaven Inlet<br />Virginia Beach, VA</p>
+              <div className="info-body">
+                <h3>Start Line</h3>
+                <p>Lesner Bridge, Lynnhaven Inlet · Virginia Beach, VA</p>
+              </div>
             </div>
             <div className="info-card">
               <div className="icon"><IconFlag /></div>
-              <h3>Finish Line</h3>
-              <p>Chesapeake Bay Bridge-Tunnel<br />~2 miles down the bay coast</p>
-            </div>
-            <div className="info-card">
-              <div className="icon"><IconLifebuoy /></div>
-              <h3>Safety Support</h3>
-              <p>Kayak &amp; boat escorts on course.<br /><span className="tbd">[Full safety plan TBD]</span></p>
+              <div className="info-body">
+                <h3>Finish Line</h3>
+                <p>Chesapeake Bay Bridge-Tunnel · ~2 miles down the bay coast</p>
+              </div>
             </div>
             <div className="info-card">
               <div className="icon"><IconWave /></div>
-              <h3>Conditions</h3>
-              <p>Open bay, timed to the tide window.<br /><span className="tbd">[Water temp / wetsuit policy TBD]</span></p>
-            </div>
-            <div className="info-card">
-              <div className="icon"><IconTicket /></div>
-              <h3>Entry</h3>
-              <p><span className="tbd">{EVENT.price}</span> per swimmer<br />Limited field — register early.</p>
+              <div className="info-body">
+                <h3>Conditions</h3>
+                <p>Low tide is at 9:00 AM, so we start at 9:30 and ride the incoming flood tide — the current works with you the whole way.</p>
+              </div>
             </div>
           </div>
         </div>
