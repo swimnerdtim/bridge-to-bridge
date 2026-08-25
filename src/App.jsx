@@ -3,6 +3,7 @@ import heroImg from './assets/hero-bay-aerial.jpg'
 import startImg from './assets/beach-startline.jpg'
 import finishImg from './assets/cbbt-finish.jpg'
 import mapImg from './assets/course-map.jpg'
+import duneImg from './assets/dune-path.jpg'
 import logoImg from './assets/swimnerd-logo.jpg'
 import Waiver from './Waiver.jsx'
 import { IconCalendar, IconPin, IconFlag, IconWave, IconLifebuoy } from './Icons.jsx'
@@ -26,6 +27,7 @@ const NAV = [
   { href: '#about', label: 'The Swim' },
   { href: '#route', label: 'The Route' },
   { href: '#history', label: 'History' },
+  { href: '#gallery', label: 'Gallery' },
   { href: '#details', label: 'Details' },
   { href: '#faq', label: 'FAQ' },
   { href: '#waiver', label: 'Waiver' },
@@ -257,6 +259,31 @@ export default function App() {
               <div className="stat-num">#1</div>
               <div className="stat-label">Largest US Crater</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section id="gallery" className="gallery">
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow">The Scene</span>
+            <h2>Where You&rsquo;ll Swim</h2>
+            <p>Chic&rsquo;s Beach, the Chesapeake Bay, and the bridges that bookend the course.</p>
+          </div>
+          <div className="gallery-grid">
+            <figure className="gallery-item gallery-tall">
+              <img src={duneImg} alt="The dune path down to the water at Chic's Beach" loading="lazy" />
+              <figcaption>The walk down to the water at Chic&rsquo;s Beach</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src={startImg} alt="The Chesapeake Bay shoreline near the start" loading="lazy" />
+              <figcaption>Looking down the shoreline toward the CBBT</figcaption>
+            </figure>
+            <figure className="gallery-item">
+              <img src={finishImg} alt="The Chesapeake Bay Bridge-Tunnel finish" loading="lazy" />
+              <figcaption>The CBBT — your finish line</figcaption>
+            </figure>
           </div>
         </div>
       </section>
