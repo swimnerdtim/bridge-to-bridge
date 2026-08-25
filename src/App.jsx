@@ -9,7 +9,7 @@ import { IconCalendar, IconPin, IconFlag, IconWave } from './Icons.jsx'
 
 // ─── Event config (edit these when details are locked) ───────────────
 const EVENT = {
-  name: 'Bridge to Bridge',
+  name: "Chic's Beach Bridge to Bridge",
   tagline: 'A 2-mile open water swim along the Chesapeake Bay',
   date: 'Saturday, September 19, 2026',
   time: '9:30 AM',
@@ -122,7 +122,8 @@ export default function App() {
       {/* HERO */}
       <header id="top" className="hero" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container hero-inner">
-          <span className="eyebrow">Swimnerd Masters · Chesapeake Bay, VA</span>
+          <span className="eyebrow">Chic's Beach · Chesapeake Bay, VA</span>
+          <div className="hero-kicker">Chic's Beach</div>
           <h1>Bridge <span className="accent">to</span> Bridge</h1>
           <p className="sub">{EVENT.tagline} — from the {EVENT.start} to the {EVENT.finish}.</p>
           <div className="hero-cta">
@@ -158,7 +159,7 @@ export default function App() {
             <span className="eyebrow">The Swim</span>
             <h2>Two Bridges. One Bay. You Against the Water.</h2>
             <p>
-              The Swimnerd Masters Bridge to Bridge is a point-to-point open water
+              The Chic's Beach Bridge to Bridge is a point-to-point open water
               swim along the Chesapeake Bay — starting beneath the Lesner Bridge
               at the mouth of the Lynnhaven and finishing at the iconic Chesapeake
               Bay Bridge-Tunnel on the horizon.
@@ -259,13 +260,13 @@ export default function App() {
         <div className="container register-inner">
           <span className="eyebrow" style={{ justifyContent: 'center', display: 'flex' }}>Claim Your Spot</span>
           <h2>Ready to Swim Bridge to Bridge?</h2>
-          <p>Fields are limited and open water swims fill up. Fill out the form below to lock in your entry for the Bridge to Bridge.</p>
+          <p>Fields are limited and open water swims fill up. Fill out the form below to lock in your entry for the Chic's Beach Bridge to Bridge.</p>
 
           {EVENT.googleFormUrl && !EVENT.googleFormUrl.startsWith('[') ? (
             <div className="form-embed">
               <iframe
                 src={EVENT.googleFormUrl}
-                title="Bridge to Bridge Registration"
+                title="Chic's Beach Bridge to Bridge Registration"
                 width="100%"
                 height="920"
                 frameBorder="0"
@@ -311,7 +312,7 @@ export default function App() {
       <footer className="footer">
         <div className="container">
           <div className="brand footer-brand"><span className="logo-pill"><img src={logoImg} alt="Swimnerd" /></span></div>
-          <p>The Bridge to Bridge Swim · Chesapeake Bay, Virginia Beach, VA</p>
+          <p>The Chic's Beach Bridge to Bridge · Chesapeake Bay, Virginia Beach, VA</p>
           <div className="links">
             <a href="#about">The Swim</a>
             <a href="#route">The Route</a>

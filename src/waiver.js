@@ -1,13 +1,13 @@
-// Official participant waiver text for the Swimnerd Masters Bridge to Bridge Open Water Swim.
+// Official participant waiver text for the Chic's Beach Bridge to Bridge Open Water Swim.
 // Rendered on the Waiver page. Signing/collection happens via the registration platform.
 
 export const WAIVER = {
   title: 'Participant Waiver & Release of Liability',
   subtitle: 'Assumption of Risk & Indemnification Agreement',
-  eventLine: 'Bridge to Bridge Open Water Swim',
+  eventLine: "Chic's Beach Bridge to Bridge Open Water Swim",
   courseLine: 'Lesner Bridge / Lynnhaven Inlet area to the Chesapeake Bay Bridge-Tunnel area, Virginia Beach, Virginia',
   intro:
-    'In consideration for being permitted to participate in the Swimnerd Masters Bridge to Bridge Open Water Swim, related training activities, transportation, staging, support operations, and associated activities (collectively, the “Event”), I acknowledge and agree to the following:',
+    'In consideration for being permitted to participate in the Chic’s Beach Bridge to Bridge Open Water Swim, related training activities, transportation, staging, support operations, and associated activities (collectively, the “Event”), I acknowledge and agree to the following:',
   sections: [
     {
       n: '1',
