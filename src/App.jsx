@@ -5,7 +5,7 @@ import finishImg from './assets/cbbt-finish.jpg'
 import mapImg from './assets/course-map.jpg'
 import logoImg from './assets/swimnerd-logo.jpg'
 import Waiver from './Waiver.jsx'
-import { IconCalendar, IconPin, IconFlag, IconWave } from './Icons.jsx'
+import { IconCalendar, IconPin, IconFlag, IconWave, IconLifebuoy } from './Icons.jsx'
 
 // ─── Event config (edit these when details are locked) ───────────────
 const EVENT = {
@@ -48,7 +48,7 @@ const FAQS = [
   },
   {
     q: 'Is there safety support on the water?',
-    a: 'Yes — [SAFETY DETAILS TBD]. Kayak and paddleboard escorts shadow the field, with support boats on the course. Every swimmer is accounted for start to finish.',
+    a: 'No. This is a self-supported swim — there are no boats, kayaks, or lifeguards on the water. You are responsible for your own safety. If you want a spotter, bring someone to walk or paddle along the beach with you. Only sign up if you are a strong, experienced open water swimmer comfortable swimming 2 miles unsupported.',
   },
   {
     q: 'How fit do I need to be?',
@@ -59,8 +59,8 @@ const FAQS = [
     a: 'The route is timed around a favorable tide window. Full course briefing is provided before the start so you know exactly where to sight and how to work with the current.',
   },
   {
-    q: 'What do I get for registering?',
-    a: '[SWAG/PERKS TBD] — timing, finisher recognition, and the bragging rights of swimming bridge to bridge.',
+    q: 'Do I need a swim cap?',
+    a: 'Yes — a bright neon-green cap is mandatory and will be provided to every swimmer. It keeps you visible to boat traffic and to anyone walking the beach with you. No cap, no swim.',
   },
 ]
 
@@ -294,8 +294,15 @@ export default function App() {
             <div className="info-card">
               <div className="icon"><IconWave /></div>
               <div className="info-body">
-                <h3>Conditions</h3>
+                <h3>Conditions &amp; Tide</h3>
                 <p>Low tide is at 9:00 AM, so we start at 9:30 and ride the incoming flood tide — the current works with you the whole way.</p>
+              </div>
+            </div>
+            <div className="info-card">
+              <div className="icon"><IconLifebuoy /></div>
+              <div className="info-body">
+                <h3>Self-Supported Swim</h3>
+                <p>No boats or lifeguards on the water — you swim at your own risk. Bring someone to walk the beach alongside you if you want a spotter. Mandatory neon-green caps provided.</p>
               </div>
             </div>
           </div>
