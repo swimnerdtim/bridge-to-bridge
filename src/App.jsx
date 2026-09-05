@@ -130,6 +130,10 @@ export default function App() {
           <div className="hero-kicker">Chic's Beach</div>
           <h1>Bridge <span className="accent">to</span> Bridge</h1>
           <p className="sub">{EVENT.tagline} — from the {EVENT.start} to the {EVENT.finish}.</p>
+          <div className="conditions-banner">
+            <span className="conditions-main">Any Conditions <em>(Minus Lightning)</em></span>
+            <span className="conditions-sub">Swim at your own risk. Fingers crossed for winds and waves. 🌊</span>
+          </div>
           <div className="hero-cta">
             <a href={EVENT.registerUrl} className="btn btn-primary">Register Now</a>
             <a href="#route" className="btn btn-ghost">See the Route</a>
