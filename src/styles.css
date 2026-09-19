@@ -197,6 +197,8 @@ section { padding: 96px 0; }
 
 /* DETAILS / info cards */
 .details { background: linear-gradient(180deg, var(--navy) 0%, var(--deep) 100%); }
+
+.parking { background: linear-gradient(180deg, var(--deep) 0%, var(--navy) 100%); }
 .info-grid { display: flex; flex-direction: column; gap: 16px; max-width: 760px; margin: 0 auto; }
 .info-card {
   background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);

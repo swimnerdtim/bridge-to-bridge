@@ -7,7 +7,7 @@ import duneImg from './assets/dune-path.jpg'
 import spanImg from './assets/beach-cbbt-span.jpg'
 import logoImg from './assets/swimnerd-logo.jpg'
 import Waiver from './Waiver.jsx'
-import { IconCalendar, IconPin, IconFlag, IconWave, IconLifebuoy } from './Icons.jsx'
+import { IconCalendar, IconPin, IconFlag, IconWave, IconLifebuoy, IconCar } from './Icons.jsx'
 
 // ─── Event config (edit these when details are locked) ───────────────
 const EVENT = {
@@ -30,6 +30,7 @@ const NAV = [
   { href: '#history', label: 'History' },
   { href: '#gallery', label: 'Gallery' },
   { href: '#details', label: 'Details' },
+  { href: '#parking', label: 'Parking' },
   { href: '#faq', label: 'FAQ' },
   { href: '#waiver', label: 'Waiver' },
 ]
@@ -64,6 +65,10 @@ const FAQS = [
   {
     q: 'Do I need a swim cap?',
     a: 'Yes — a bright neon-green cap is mandatory and will be provided to every swimmer. It keeps you visible to boat traffic and to anyone walking the beach with you. No cap, no swim.',
+  },
+  {
+    q: 'Where do I park, and how do I get to the start?',
+    a: 'Since this is a point-to-point swim, park at the Lynnhaven Boat Ramp (paid parking) and walk under the Lesner Bridge to the start line. After the swim, we’ll have a few cars staged at the finish to shuttle swimmers back to the boat ramp — it’s only about a 2-mile drive, so pile in and we’ll get you back to your vehicle.',
   },
 ]
 
@@ -341,6 +346,41 @@ export default function App() {
                 <p>No boats or lifeguards on the water — you swim at your own risk. Bring someone to walk the beach alongside you if you want a spotter. Mandatory neon-green caps provided.</p>
               </div>
             </div>
+            <div className="info-card">
+              <div className="icon"><IconCar /></div>
+              <div className="info-body">
+                <h3>Parking &amp; Shuttle</h3>
+                <p>Pay to park at the Lynnhaven Boat Ramp, then walk under the Lesner Bridge to the start. After the swim, a few cars will shuttle swimmers back to the ramp — about a 2-mile drive.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PARKING & LOGISTICS */}
+      <section id="parking" className="parking">
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow">Getting There</span>
+            <h2>Parking &amp; The Ride Back</h2>
+            <p>It’s a point-to-point swim, so here’s how to handle your car before and after.</p>
+          </div>
+          <div className="route-steps">
+            <div className="route-step">
+              <div className="num">01</div>
+              <h3>Park at the Boat Ramp</h3>
+              <p>Pay to park at the <strong>Lynnhaven Boat Ramp</strong>. This is your home base — where your car waits while you swim.</p>
+            </div>
+            <div className="route-step">
+              <div className="num">02</div>
+              <h3>Walk to the Start</h3>
+              <p>From the boat ramp, walk <strong>under the Lesner Bridge</strong> to the start line. Short walk, then it’s go time.</p>
+            </div>
+            <div className="route-step">
+              <div className="num">03</div>
+              <h3>Shuttle Back</h3>
+              <p>After the finish, we’ll have <strong>a few cars staged to shuttle swimmers</strong> back to the boat ramp — just a ~2-mile drive. Pile in and we’ll get you back to your vehicle.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -407,6 +447,7 @@ export default function App() {
             <a href="#about">The Swim</a>
             <a href="#route">The Route</a>
             <a href="#details">Details</a>
+            <a href="#parking">Parking</a>
             <a href="#waiver">Waiver</a>
             <a href={EVENT.registerUrl}>Register</a>
             <a href="https://swimnerd.com" target="_blank" rel="noreferrer">Swimnerd.com</a>

@@ -57,6 +57,18 @@ export function IconWave() {
   )
 }
 
+export function IconCar() {
+  return (
+    <svg viewBox="0 0 24 24" {...base} aria-hidden="true">
+      <path d="M4 16v2.5M20 16v2.5" />
+      <path d="M3.5 16v-3.2l1.8-4.3A2 2 0 0 1 7.15 7h9.7a2 2 0 0 1 1.85 1.5l1.8 4.3V16a1 1 0 0 1-1 1H4.5a1 1 0 0 1-1-1Z" />
+      <path d="M3.8 12.5h16.4" />
+      <circle cx="7.5" cy="14.5" r="1" />
+      <circle cx="16.5" cy="14.5" r="1" />
+    </svg>
+  )
+}
+
 export function IconTicket() {
   return (
     <svg viewBox="0 0 24 24" {...base} aria-hidden="true">
