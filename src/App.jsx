@@ -375,7 +375,7 @@ export default function App() {
             {GALLERY_PHOTOS.map((photo, i) => (
               <figure
                 key={i}
-                className={`gallery-item${photo.size === 'wide' ? ' gallery-wide' : ''}${photo.size === 'tall' ? ' gallery-tall' : ''}`}
+                className="gallery-item"
               >
                 <img src={photo.src} alt="Chic's Beach Bridge to Bridge open water swim" loading="lazy" />
               </figure>
