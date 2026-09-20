@@ -68,50 +68,20 @@ const EVENT = {
   contactEmail: 'masters@swimnerd.com',
 }
 
-// ─── Event photo gallery (2025 + 2026 combined) ───
-// size: 'wide' = 2 cols, 'tall' = 2 rows, undefined = 1x1
-const GALLERY_PHOTOS = [
-  { src: y26_lineup_wide, size: 'wide' },
-  { src: y26_jumping, size: 'tall' },
-  { src: y25_swimmer_surf_wide, size: 'wide' },
-  { src: y25_arms_raised, size: 'tall' },
-  { src: y26_peace },
-  { src: y26_masters_high_five },
-  { src: y25_group_cbbt },
-  { src: y26_beach_cbbt_wide, size: 'wide' },
-  { src: y26_running_tall, size: 'tall' },
-  { src: y25_sprint },
-  { src: y26_three_posing },
-  { src: y25_flex },
-  { src: y26_mass_start_wide, size: 'wide' },
-  { src: y25_high_five },
-  { src: y26_thumbs_smile },
-  { src: y25_running_wide, size: 'tall' },
-  { src: y26_two_in_surf },
-  { src: y25_two_smiling },
-  { src: y26_green_smile },
-  { src: y25_three_finishers, size: 'wide' },
-  { src: y26_under_bridge },
-  { src: y25_shoreline, size: 'tall' },
-  { src: y26_waving },
-  { src: y25_arms_wide },
-  { src: y26_moody_sky_wide, size: 'wide' },
-  { src: y25_fins },
-  { src: y26_pink_suit },
-  { src: y25_thumbs_up },
-  { src: y26_two_chatting },
-  { src: y25_buoy },
-  { src: y26_start_cluster_wide, size: 'wide' },
-  { src: y26_thumbs_jammers },
-  { src: y25_two_emerging },
-  { src: y26_frog_cap },
-  { src: y25_wading_sky },
-  { src: y26_crab_cap },
-  { src: y26_wading_horizon },
-  { src: y25_two_swimmers },
-  { src: y26_green_logo },
-  { src: y26_wading_camo },
-  { src: y26_standing },
+// ─── Event photo galleries (by year) ───
+const GALLERY_2026 = [
+  y26_lineup_wide, y26_jumping, y26_mass_start_wide, y26_peace, y26_masters_high_five,
+  y26_beach_cbbt_wide, y26_running_tall, y26_three_posing, y26_thumbs_smile, y26_start_cluster_wide,
+  y26_two_in_surf, y26_green_smile, y26_under_bridge, y26_moody_sky_wide, y26_waving,
+  y26_pink_suit, y26_two_chatting, y26_thumbs_jammers, y26_wading_horizon, y26_frog_cap,
+  y26_crab_cap, y26_green_logo, y26_wading_camo, y26_standing,
+]
+
+const GALLERY_2025 = [
+  y25_swimmer_surf_wide, y25_arms_raised, y25_group_cbbt, y25_three_finishers, y25_running_wide,
+  y25_sprint, y25_flex, y25_high_five, y25_two_smiling, y25_shoreline,
+  y25_arms_wide, y25_fins, y25_thumbs_up, y25_buoy, y25_two_emerging,
+  y25_wading_sky, y25_two_swimmers,
 ]
 
 const NAV = [
@@ -175,7 +145,10 @@ function useScrolled() {
 export default function App() {
   const scrolled = useScrolled()
   const [openFaq, setOpenFaq] = useState(0)
+  const [galleryYear, setGalleryYear] = useState('2026')
   const route = useHashRoute()
+
+  const activeGallery = galleryYear === '2026' ? GALLERY_2026 : GALLERY_2025
 
   // Dedicated waiver page route
   useEffect(() => {
@@ -371,13 +344,24 @@ export default function App() {
             <h2>Faces of the Swim</h2>
             <p>Real swimmers, real finishes on the Chesapeake Bay.</p>
           </div>
+          <div className="gallery-tabs" role="tablist" aria-label="Photo year">
+            <button
+              role="tab"
+              aria-selected={galleryYear === '2026'}
+              className={`gallery-tab${galleryYear === '2026' ? ' active' : ''}`}
+              onClick={() => setGalleryYear('2026')}
+            >2026</button>
+            <button
+              role="tab"
+              aria-selected={galleryYear === '2025'}
+              className={`gallery-tab${galleryYear === '2025' ? ' active' : ''}`}
+              onClick={() => setGalleryYear('2025')}
+            >2025</button>
+          </div>
           <div className="gallery-grid">
-            {GALLERY_PHOTOS.map((photo, i) => (
-              <figure
-                key={i}
-                className="gallery-item"
-              >
-                <img src={photo.src} alt="Chic's Beach Bridge to Bridge open water swim" loading="lazy" />
+            {activeGallery.map((src, i) => (
+              <figure key={`${galleryYear}-${i}`} className="gallery-item">
+                <img src={src} alt="Chic's Beach Bridge to Bridge open water swim" loading="lazy" />
               </figure>
             ))}
           </div>
