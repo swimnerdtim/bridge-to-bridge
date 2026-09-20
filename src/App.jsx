@@ -3,9 +3,53 @@ import heroImg from './assets/hero-bay-aerial.jpg'
 import startImg from './assets/beach-startline.jpg'
 import finishImg from './assets/cbbt-finish.jpg'
 import mapImg from './assets/course-map.jpg'
-import duneImg from './assets/dune-path.jpg'
-import spanImg from './assets/beach-cbbt-span.jpg'
 import logoImg from './assets/swimnerd-logo.jpg'
+
+// ─── Event photos: 2025 ───
+import y25_group_cbbt from './assets/2025/group-cbbt-swimnerd.jpg'
+import y25_two_swimmers from './assets/2025/beach-two-swimmers.jpg'
+import y25_arms_raised from './assets/2025/finish-arms-raised.jpg'
+import y25_thumbs_up from './assets/2025/finish-thumbs-up.jpg'
+import y25_fins from './assets/2025/finish-fins-in-hand.jpg'
+import y25_three_finishers from './assets/2025/group-three-finishers.jpg'
+import y25_running_wide from './assets/2025/finish-running-cbbt-wide.jpg'
+import y25_shoreline from './assets/2025/scene-cbbt-shoreline.jpg'
+import y25_two_emerging from './assets/2025/finish-two-emerging.jpg'
+import y25_wading_sky from './assets/2025/finish-wading-sky.jpg'
+import y25_two_smiling from './assets/2025/finish-two-smiling.jpg'
+import y25_flex from './assets/2025/finish-flex-victory.jpg'
+import y25_arms_wide from './assets/2025/finish-arms-wide.jpg'
+import y25_buoy from './assets/2025/finish-buoy-float.jpg'
+import y25_sprint from './assets/2025/finish-sprint-out.jpg'
+import y25_high_five from './assets/2025/finish-high-five.jpg'
+import y25_swimmer_surf_wide from './assets/2025/scene-swimmer-in-surf-wide.jpg'
+
+// ─── Event photos: 2026 ───
+import y26_lineup_wide from './assets/2026/group-full-lineup-wide.jpg'
+import y26_mass_start_wide from './assets/2026/start-mass-wade-in-wide.jpg'
+import y26_start_cluster_wide from './assets/2026/start-cluster-deep-wide.jpg'
+import y26_beach_cbbt_wide from './assets/2026/group-beach-cbbt-wide.jpg'
+import y26_moody_sky_wide from './assets/2026/scene-moody-sky-buoy-wide.jpg'
+import y26_jumping from './assets/2026/finish-jumping-arms-up.jpg'
+import y26_peace from './assets/2026/finish-peace-signs.jpg'
+import y26_thumbs_smile from './assets/2026/finish-thumbs-up-smile.jpg'
+import y26_thumbs_jammers from './assets/2026/finish-thumbs-up-jammers.jpg'
+import y26_green_smile from './assets/2026/finish-green-cap-smile.jpg'
+import y26_masters_high_five from './assets/2026/finish-masters-high-five.jpg'
+import y26_three_posing from './assets/2026/finish-three-posing.jpg'
+import y26_running_tall from './assets/2026/finish-running-tall.jpg'
+import y26_pink_suit from './assets/2026/finish-pink-suit-walk.jpg'
+import y26_crab_cap from './assets/2026/finish-crab-cap.jpg'
+import y26_frog_cap from './assets/2026/finish-frog-cap.jpg'
+import y26_green_logo from './assets/2026/finish-green-cap-logo.jpg'
+import y26_waving from './assets/2026/finish-waving-red-suit.jpg'
+import y26_two_in_surf from './assets/2026/finish-two-in-surf.jpg'
+import y26_two_chatting from './assets/2026/finish-two-chatting.jpg'
+import y26_under_bridge from './assets/2026/finish-under-bridge.jpg'
+import y26_wading_camo from './assets/2026/finish-wading-camo.jpg'
+import y26_wading_horizon from './assets/2026/finish-wading-horizon.jpg'
+import y26_standing from './assets/2026/finish-swimmer-standing.jpg'
+
 import Waiver from './Waiver.jsx'
 import { IconCalendar, IconPin, IconFlag, IconWave, IconLifebuoy, IconCar } from './Icons.jsx'
 
@@ -23,6 +67,55 @@ const EVENT = {
   price: '[PRICE TBD]',           // e.g. '$65'
   contactEmail: 'masters@swimnerd.com',
 }
+
+// ─── Event photo galleries (by year) ───
+// size: 'wide' = 2 cols, 'tall' = 2 rows, undefined = 1x1
+const GALLERY_2026 = [
+  { src: y26_lineup_wide, size: 'wide', cap: 'The full field — green caps on the line at Chic’s Beach' },
+  { src: y26_jumping, size: 'tall', cap: 'Out of the water, arms up — you made it' },
+  { src: y26_mass_start_wide, size: 'wide', cap: 'The mass start — wading in together across the bay' },
+  { src: y26_peace, cap: 'All smiles at the finish' },
+  { src: y26_masters_high_five, cap: 'Masters camaraderie on the beach' },
+  { src: y26_beach_cbbt_wide, size: 'wide', cap: 'Gathered on the sand, the CBBT on the horizon' },
+  { src: y26_running_tall, size: 'tall', cap: 'Sprint to the sand' },
+  { src: y26_three_posing, cap: 'Finishers' },
+  { src: y26_thumbs_smile, cap: 'Thumbs up, swim done' },
+  { src: y26_start_cluster_wide, size: 'wide', cap: 'Heading out to the start line' },
+  { src: y26_two_in_surf, cap: 'Pushing through the surf together' },
+  { src: y26_green_smile, cap: 'Made it in' },
+  { src: y26_under_bridge, cap: 'Walking out under the Lesner Bridge' },
+  { src: y26_moody_sky_wide, size: 'wide', cap: 'Dawn over the bay before the swim' },
+  { src: y26_waving, cap: 'Wave for the camera' },
+  { src: y26_pink_suit, cap: 'Up the beach after 2 miles' },
+  { src: y26_two_chatting, cap: 'Swapping stories on the shoreline' },
+  { src: y26_thumbs_jammers, cap: 'Another one in the books' },
+  { src: y26_wading_horizon, cap: 'The bay stretching to the horizon' },
+  { src: y26_frog_cap, cap: 'Fun caps encouraged' },
+  { src: y26_crab_cap, cap: 'Coming ashore' },
+  { src: y26_green_logo, cap: 'Standing in the surf' },
+  { src: y26_wading_camo, cap: 'The last few strokes' },
+  { src: y26_standing, cap: 'Post-swim on the beach' },
+]
+
+const GALLERY_2025 = [
+  { src: y25_swimmer_surf_wide, size: 'wide', cap: 'The CBBT to the horizon — your view the whole swim' },
+  { src: y25_arms_raised, size: 'tall', cap: 'Arms up out of the surf' },
+  { src: y25_group_cbbt, cap: 'The crew under the bridge' },
+  { src: y25_three_finishers, size: 'wide', cap: 'Finishers, arm in arm' },
+  { src: y25_running_wide, size: 'tall', cap: 'Running it in under a big sky' },
+  { src: y25_sprint, cap: 'Sprint finish' },
+  { src: y25_flex, cap: 'Victory flex' },
+  { src: y25_high_five, cap: 'High-fives on the beach' },
+  { src: y25_two_smiling, cap: 'All smiles coming out' },
+  { src: y25_shoreline, size: 'tall', cap: 'The Chesapeake Bay shoreline' },
+  { src: y25_arms_wide, cap: 'Arms wide, swim done' },
+  { src: y25_fins, cap: 'Fins in hand at the finish' },
+  { src: y25_thumbs_up, cap: 'Thumbs up' },
+  { src: y25_buoy, cap: 'Safety buoy in tow' },
+  { src: y25_two_emerging, cap: 'Emerging from the bay' },
+  { src: y25_wading_sky, cap: 'Wading in under the clouds' },
+  { src: y25_two_swimmers, cap: 'Two swimmers, one finish' },
+]
 
 const NAV = [
   { href: '#about', label: 'The Swim' },
@@ -85,7 +178,10 @@ function useScrolled() {
 export default function App() {
   const scrolled = useScrolled()
   const [openFaq, setOpenFaq] = useState(0)
+  const [galleryYear, setGalleryYear] = useState('2026')
   const route = useHashRoute()
+
+  const activeGallery = galleryYear === '2026' ? GALLERY_2026 : GALLERY_2025
 
   // Dedicated waiver page route
   useEffect(() => {
@@ -278,26 +374,33 @@ export default function App() {
         <div className="container">
           <div className="section-head">
             <span className="eyebrow">The Scene</span>
-            <h2>Where You&rsquo;ll Swim</h2>
-            <p>Chic&rsquo;s Beach, the Chesapeake Bay, and the bridges that bookend the course.</p>
+            <h2>Faces of the Swim</h2>
+            <p>Real swimmers, real finishes on the Chesapeake Bay. Take a look at the field from past years.</p>
+          </div>
+          <div className="gallery-tabs" role="tablist" aria-label="Photo year">
+            <button
+              role="tab"
+              aria-selected={galleryYear === '2026'}
+              className={`gallery-tab${galleryYear === '2026' ? ' active' : ''}`}
+              onClick={() => setGalleryYear('2026')}
+            >2026</button>
+            <button
+              role="tab"
+              aria-selected={galleryYear === '2025'}
+              className={`gallery-tab${galleryYear === '2025' ? ' active' : ''}`}
+              onClick={() => setGalleryYear('2025')}
+            >2025</button>
           </div>
           <div className="gallery-grid">
-            <figure className="gallery-item gallery-wide">
-              <img src={spanImg} alt="The full span of the CBBT across the horizon from Chic's Beach" loading="lazy" />
-              <figcaption>The full span of the CBBT across the bay — your horizon the whole swim</figcaption>
-            </figure>
-            <figure className="gallery-item gallery-tall">
-              <img src={duneImg} alt="The dune path down to the water at Chic's Beach" loading="lazy" />
-              <figcaption>The walk down to the water at Chic&rsquo;s Beach</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src={startImg} alt="The Chesapeake Bay shoreline near the start" loading="lazy" />
-              <figcaption>Looking down the shoreline</figcaption>
-            </figure>
-            <figure className="gallery-item">
-              <img src={finishImg} alt="The Chesapeake Bay Bridge-Tunnel finish" loading="lazy" />
-              <figcaption>The CBBT — your finish line</figcaption>
-            </figure>
+            {activeGallery.map((photo, i) => (
+              <figure
+                key={`${galleryYear}-${i}`}
+                className={`gallery-item${photo.size === 'wide' ? ' gallery-wide' : ''}${photo.size === 'tall' ? ' gallery-tall' : ''}`}
+              >
+                <img src={photo.src} alt={photo.cap} loading="lazy" />
+                <figcaption>{photo.cap}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>

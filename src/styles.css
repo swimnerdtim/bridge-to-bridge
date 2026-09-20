@@ -374,6 +374,20 @@ section { padding: 96px 0; }
 
 /* ─── GALLERY ─── */
 .gallery { background: var(--navy); }
+.gallery-tabs {
+  display: flex; justify-content: center; gap: 10px; margin: 0 auto 28px;
+}
+.gallery-tab {
+  font: inherit; font-weight: 700; font-size: 1rem; letter-spacing: 0.02em;
+  color: #cfe0ee; background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14); border-radius: 999px;
+  padding: 10px 28px; cursor: pointer; transition: all 0.2s ease;
+}
+.gallery-tab:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.gallery-tab.active {
+  color: #fff; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  border-color: transparent; box-shadow: 0 10px 30px rgba(255, 122, 60, 0.4);
+}
 .gallery-grid {
   display: grid; grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 240px; gap: 18px;
