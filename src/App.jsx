@@ -68,53 +68,50 @@ const EVENT = {
   contactEmail: 'masters@swimnerd.com',
 }
 
-// ─── Event photo galleries (by year) ───
+// ─── Event photo gallery (2025 + 2026 combined) ───
 // size: 'wide' = 2 cols, 'tall' = 2 rows, undefined = 1x1
-const GALLERY_2026 = [
-  { src: y26_lineup_wide, size: 'wide', cap: 'The full field — green caps on the line at Chic’s Beach' },
-  { src: y26_jumping, size: 'tall', cap: 'Out of the water, arms up — you made it' },
-  { src: y26_mass_start_wide, size: 'wide', cap: 'The mass start — wading in together across the bay' },
-  { src: y26_peace, cap: 'All smiles at the finish' },
-  { src: y26_masters_high_five, cap: 'Masters camaraderie on the beach' },
-  { src: y26_beach_cbbt_wide, size: 'wide', cap: 'Gathered on the sand, the CBBT on the horizon' },
-  { src: y26_running_tall, size: 'tall', cap: 'Sprint to the sand' },
-  { src: y26_three_posing, cap: 'Finishers' },
-  { src: y26_thumbs_smile, cap: 'Thumbs up, swim done' },
-  { src: y26_start_cluster_wide, size: 'wide', cap: 'Heading out to the start line' },
-  { src: y26_two_in_surf, cap: 'Pushing through the surf together' },
-  { src: y26_green_smile, cap: 'Made it in' },
-  { src: y26_under_bridge, cap: 'Walking out under the Lesner Bridge' },
-  { src: y26_moody_sky_wide, size: 'wide', cap: 'Dawn over the bay before the swim' },
-  { src: y26_waving, cap: 'Wave for the camera' },
-  { src: y26_pink_suit, cap: 'Up the beach after 2 miles' },
-  { src: y26_two_chatting, cap: 'Swapping stories on the shoreline' },
-  { src: y26_thumbs_jammers, cap: 'Another one in the books' },
-  { src: y26_wading_horizon, cap: 'The bay stretching to the horizon' },
-  { src: y26_frog_cap, cap: 'Fun caps encouraged' },
-  { src: y26_crab_cap, cap: 'Coming ashore' },
-  { src: y26_green_logo, cap: 'Standing in the surf' },
-  { src: y26_wading_camo, cap: 'The last few strokes' },
-  { src: y26_standing, cap: 'Post-swim on the beach' },
-]
-
-const GALLERY_2025 = [
-  { src: y25_swimmer_surf_wide, size: 'wide', cap: 'The CBBT to the horizon — your view the whole swim' },
-  { src: y25_arms_raised, size: 'tall', cap: 'Arms up out of the surf' },
-  { src: y25_group_cbbt, cap: 'The crew under the bridge' },
-  { src: y25_three_finishers, size: 'wide', cap: 'Finishers, arm in arm' },
-  { src: y25_running_wide, size: 'tall', cap: 'Running it in under a big sky' },
-  { src: y25_sprint, cap: 'Sprint finish' },
-  { src: y25_flex, cap: 'Victory flex' },
-  { src: y25_high_five, cap: 'High-fives on the beach' },
-  { src: y25_two_smiling, cap: 'All smiles coming out' },
-  { src: y25_shoreline, size: 'tall', cap: 'The Chesapeake Bay shoreline' },
-  { src: y25_arms_wide, cap: 'Arms wide, swim done' },
-  { src: y25_fins, cap: 'Fins in hand at the finish' },
-  { src: y25_thumbs_up, cap: 'Thumbs up' },
-  { src: y25_buoy, cap: 'Safety buoy in tow' },
-  { src: y25_two_emerging, cap: 'Emerging from the bay' },
-  { src: y25_wading_sky, cap: 'Wading in under the clouds' },
-  { src: y25_two_swimmers, cap: 'Two swimmers, one finish' },
+const GALLERY_PHOTOS = [
+  { src: y26_lineup_wide, size: 'wide' },
+  { src: y26_jumping, size: 'tall' },
+  { src: y25_swimmer_surf_wide, size: 'wide' },
+  { src: y25_arms_raised, size: 'tall' },
+  { src: y26_peace },
+  { src: y26_masters_high_five },
+  { src: y25_group_cbbt },
+  { src: y26_beach_cbbt_wide, size: 'wide' },
+  { src: y26_running_tall, size: 'tall' },
+  { src: y25_sprint },
+  { src: y26_three_posing },
+  { src: y25_flex },
+  { src: y26_mass_start_wide, size: 'wide' },
+  { src: y25_high_five },
+  { src: y26_thumbs_smile },
+  { src: y25_running_wide, size: 'tall' },
+  { src: y26_two_in_surf },
+  { src: y25_two_smiling },
+  { src: y26_green_smile },
+  { src: y25_three_finishers, size: 'wide' },
+  { src: y26_under_bridge },
+  { src: y25_shoreline, size: 'tall' },
+  { src: y26_waving },
+  { src: y25_arms_wide },
+  { src: y26_moody_sky_wide, size: 'wide' },
+  { src: y25_fins },
+  { src: y26_pink_suit },
+  { src: y25_thumbs_up },
+  { src: y26_two_chatting },
+  { src: y25_buoy },
+  { src: y26_start_cluster_wide, size: 'wide' },
+  { src: y26_thumbs_jammers },
+  { src: y25_two_emerging },
+  { src: y26_frog_cap },
+  { src: y25_wading_sky },
+  { src: y26_crab_cap },
+  { src: y26_wading_horizon },
+  { src: y25_two_swimmers },
+  { src: y26_green_logo },
+  { src: y26_wading_camo },
+  { src: y26_standing },
 ]
 
 const NAV = [
@@ -178,10 +175,7 @@ function useScrolled() {
 export default function App() {
   const scrolled = useScrolled()
   const [openFaq, setOpenFaq] = useState(0)
-  const [galleryYear, setGalleryYear] = useState('2026')
   const route = useHashRoute()
-
-  const activeGallery = galleryYear === '2026' ? GALLERY_2026 : GALLERY_2025
 
   // Dedicated waiver page route
   useEffect(() => {
@@ -375,30 +369,15 @@ export default function App() {
           <div className="section-head">
             <span className="eyebrow">The Scene</span>
             <h2>Faces of the Swim</h2>
-            <p>Real swimmers, real finishes on the Chesapeake Bay. Take a look at the field from past years.</p>
-          </div>
-          <div className="gallery-tabs" role="tablist" aria-label="Photo year">
-            <button
-              role="tab"
-              aria-selected={galleryYear === '2026'}
-              className={`gallery-tab${galleryYear === '2026' ? ' active' : ''}`}
-              onClick={() => setGalleryYear('2026')}
-            >2026</button>
-            <button
-              role="tab"
-              aria-selected={galleryYear === '2025'}
-              className={`gallery-tab${galleryYear === '2025' ? ' active' : ''}`}
-              onClick={() => setGalleryYear('2025')}
-            >2025</button>
+            <p>Real swimmers, real finishes on the Chesapeake Bay.</p>
           </div>
           <div className="gallery-grid">
-            {activeGallery.map((photo, i) => (
+            {GALLERY_PHOTOS.map((photo, i) => (
               <figure
-                key={`${galleryYear}-${i}`}
+                key={i}
                 className={`gallery-item${photo.size === 'wide' ? ' gallery-wide' : ''}${photo.size === 'tall' ? ' gallery-tall' : ''}`}
               >
-                <img src={photo.src} alt={photo.cap} loading="lazy" />
-                <figcaption>{photo.cap}</figcaption>
+                <img src={photo.src} alt="Chic's Beach Bridge to Bridge open water swim" loading="lazy" />
               </figure>
             ))}
           </div>
